@@ -16,10 +16,34 @@ namespace EMPAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DepartmentController : ControllerBase
+    public class DepartmentController : Controller
     {
+        private readonly ApplicationDbContext _db;
 
-  
+        public DepartmentController(ApplicationDbContext db) 
+        {
+            _db = db;
+        }
+
+        [HttpGet]
+
+        public async Task<IActionResult> GetAll() 
+        {
+            return Json(new { data = await _db.Department.ToListAsync() });
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var departmentFromDb = await _db.Department.FirstOrDefaultAsync(u => u.DepartmentId == id);
+            if(departmentFromDb == null)
+            {
+                return Json(new { success = false, message = "Error while deleting" });
+            }
+            _db.Department.Remove(departmentFromDb);
+            return Json(new { success = true, message = "Delete successfully" });
+
+        }
         
         /*   [HttpGet]
            public JsonResult Get()
@@ -45,5 +69,6 @@ namespace EMPAPI.Controllers
                }
                return new JsonResult(table);
            }*/
+
     }
 }

@@ -1,20 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Documents\\Full-stack-employee-app\\EMPAPI\\EMPAPI\\EMPAPI.csproj": {}
+    "C:\\Users\\14034\\Documents\\ZEmployee Project\\Full-stack-employee-app\\EMPAPI\\EMPAPI\\EMPAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Documents\\Full-stack-employee-app\\EMPAPI\\EMPAPI\\EMPAPI.csproj": {
+    "C:\\Users\\14034\\Documents\\ZEmployee Project\\Full-stack-employee-app\\EMPAPI\\EMPAPI\\EMPAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Documents\\Full-stack-employee-app\\EMPAPI\\EMPAPI\\EMPAPI.csproj",
+        "projectUniqueName": "C:\\Users\\14034\\Documents\\ZEmployee Project\\Full-stack-employee-app\\EMPAPI\\EMPAPI\\EMPAPI.csproj",
         "projectName": "EMPAPI",
-        "projectPath": "C:\\Users\\User\\Documents\\Full-stack-employee-app\\EMPAPI\\EMPAPI\\EMPAPI.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Documents\\Full-stack-employee-app\\EMPAPI\\EMPAPI\\obj\\",
+        "projectPath": "C:\\Users\\14034\\Documents\\ZEmployee Project\\Full-stack-employee-app\\EMPAPI\\EMPAPI\\EMPAPI.csproj",
+        "packagesPath": "C:\\Users\\14034\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\14034\\Documents\\ZEmployee Project\\Full-stack-employee-app\\EMPAPI\\EMPAPI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\14034\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -91,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
