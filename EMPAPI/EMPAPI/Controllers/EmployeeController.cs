@@ -27,6 +27,18 @@ namespace EMPAPI.Controllers
             return Json(new { data = await _db.Employee.ToListAsync() });
         }
 
+        [HttpDelete]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var EmployeeFromDb = await _db.Employee.FirstOrDefaultAsync(u => u.EmployeeId == id);
+            if(EmployeeFromDb == null)
+            {
+                return Json(new { success = false, message = "Error while Deleting" });
+            }
+            _db.Remove(EmployeeFromDb);
+            return Json(new { success = true, message = "Delete successfully" });
+
+        }
 
     
     }
