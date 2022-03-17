@@ -102,6 +102,7 @@ C:\Users\14034\Documents\ZEmployee Project\Full-stack-employee-app\EMPAPI\EMPAPI
 C:\Users\14034\Documents\ZEmployee Project\Full-stack-employee-app\EMPAPI\EMPAPI\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\14034\Documents\ZEmployee Project\Full-stack-employee-app\EMPAPI\EMPAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\14034\Documents\ZEmployee Project\Full-stack-employee-app\EMPAPI\EMPAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\14034\Documents\ZEmployee Project\Full-stack-employee-app\EMPAPI\EMPAPI\obj\Debug\netcoreapp3.1\EMPAPI.csproj.AssemblyReference.cache
 C:\Users\14034\Documents\ZEmployee Project\Full-stack-employee-app\EMPAPI\EMPAPI\obj\Debug\netcoreapp3.1\EMPAPI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\14034\Documents\ZEmployee Project\Full-stack-employee-app\EMPAPI\EMPAPI\obj\Debug\netcoreapp3.1\EMPAPI.AssemblyInfoInputs.cache
 C:\Users\14034\Documents\ZEmployee Project\Full-stack-employee-app\EMPAPI\EMPAPI\obj\Debug\netcoreapp3.1\EMPAPI.AssemblyInfo.cs

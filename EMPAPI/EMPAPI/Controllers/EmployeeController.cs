@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace EMPAPI.Controllers
 {
@@ -24,13 +25,27 @@ namespace EMPAPI.Controllers
 
         public async Task<IActionResult> GetAll() {
 
-            return Json(new { data = await _db.Employee.ToListAsync() });
+            return Json(new { data = await _db.Employees.ToListAsync() });
         }
+
+        [HttpPost]
+
+        public async Task<ActionResult<Employee>> PostEmployee(Employee  emp)
+
+        {
+            _db.Employees.Add(emp);
+            await _db.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetAll), new { id = emp.EmployeeId }, emp);
+        }
+
+
+
 
         [HttpDelete]
         public async Task<IActionResult> Delete(int id)
         {
-            var EmployeeFromDb = await _db.Employee.FirstOrDefaultAsync(u => u.EmployeeId == id);
+            var EmployeeFromDb = await _db.Employees.FirstOrDefaultAsync(u => u.EmployeeId == id);
             if(EmployeeFromDb == null)
             {
                 return Json(new { success = false, message = "Error while Deleting" });

@@ -29,18 +29,33 @@ namespace EMPAPI.Controllers
 
         public async Task<IActionResult> GetAll() 
         {
-            return Json(new { data = await _db.Department.ToListAsync() });
+            return Json(new { data = await _db.Departments.ToListAsync() });
         }
+
+        [HttpPost]
+        public async Task<ActionResult<Department>> PostDepartment(Department dep)
+        {
+            _db.Departments.Add(dep);
+            await _db.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetAll), new { id = dep.DepartmentId }, dep);
+        }
+    
+
+
+
+
+
 
         [HttpDelete]
         public async Task<IActionResult> Delete(int id)
         {
-            var departmentFromDb = await _db.Department.FirstOrDefaultAsync(u => u.DepartmentId == id);
+            var departmentFromDb = await _db.Departments.FirstOrDefaultAsync(u => u.DepartmentId == id);
             if(departmentFromDb == null)
             {
                 return Json(new { success = false, message = "Error while deleting" });
             }
-            _db.Department.Remove(departmentFromDb);
+            _db.Departments.Remove(departmentFromDb);
             return Json(new { success = true, message = "Delete successfully" });
 
         }
